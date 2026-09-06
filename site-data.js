@@ -19,11 +19,11 @@ window.siteData = {
   ],
   navLinks: [
     { label: 'Home', href: 'index.html', key: 'home' },
-    { label: 'About', href: 'about.html', key: 'about' },
-    { label: 'Publications', href: 'publications.html', key: 'publications' },
-    { label: 'Teaching', href: 'teaching.html', key: 'teaching' },
-    { label: 'Awards', href: 'awards.html', key: 'awards' },
-    { label: 'Roles', href: 'roles.html', key: 'roles' },
+    { label: 'About', href: 'index.html#about', key: 'about' },
+    { label: 'Publications', href: 'index.html#publications', key: 'publications' },
+    { label: 'Teaching', href: 'index.html#teaching', key: 'teaching' },
+    { label: 'Awards', href: 'index.html#awards', key: 'awards' },
+    { label: 'Roles', href: 'index.html#roles', key: 'roles' },
     { label: 'CV', href: 'Ali Zaidi - CV.pdf', key: 'cv' }
   ],
   socialLinks: [

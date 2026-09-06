@@ -68,8 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!pageContent) return;
 
     const renderAboutSection = () => `
-        <section class="panel section-card">
-            <div class="section-header">About Me</div>
+        <section id="about" class="panel section-card">
+            <a href="#about" class="section-header-link">About Me</a>
             <div class="about-grid">
                 <div class="profile-card">
                     <img src="${site.profileImage}" alt="Ali Zaidi" class="profile-image">
@@ -95,8 +95,8 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
 
     const renderPublicationsSection = () => `
-        <section class="panel section-card">
-            <div class="section-header">Publications</div>
+        <section id="publications" class="panel section-card">
+            <a href="#publications" class="section-header-link">Publications</a>
             <ul class="publication-list">
                 ${site.publications
                     .map(
@@ -116,8 +116,8 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
 
     const renderTeachingSection = () => `
-        <section class="panel section-card">
-            <div class="section-header">Teaching</div>
+        <section id="teaching" class="panel section-card">
+            <a href="#teaching" class="section-header-link">Teaching</a>
             <ul class="info-list">
                 ${site.teaching.map((item) => `<li>${item}</li>`).join('')}
             </ul>
@@ -125,8 +125,8 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
 
     const renderAwardsSection = () => `
-        <section class="panel section-card">
-            <div class="section-header">Awards and Honors</div>
+        <section id="awards" class="panel section-card">
+            <a href="#awards" class="section-header-link">Awards and Honors</a>
             <ul class="info-list">
                 ${site.awards.map((item) => `<li>${item}</li>`).join('')}
             </ul>
@@ -134,8 +134,8 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
 
     const renderRolesSection = () => `
-        <section class="panel section-card">
-            <div class="section-header">Leadership Roles</div>
+        <section id="roles" class="panel section-card">
+            <a href="#roles" class="section-header-link">Leadership Roles</a>
             <ul class="info-list">
                 ${site.roles.map((item) => `<li>${item}</li>`).join('')}
             </ul>
@@ -149,8 +149,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h1 id="hero-title">${site.heroRotations[0].title}</h1>
                 <p id="hero-subtitle" class="hero-subtitle">${site.heroRotations[0].subtitle}</p>
                 <div class="hero-actions">
-                    <a href="about.html" class="primary-btn">Read more</a>
-                    <a href="publications.html" class="secondary-btn">View publications</a>
+                    <a href="#about" class="primary-btn">Read more</a>
+                    <a href="#publications" class="secondary-btn">View publications</a>
                 </div>
             </div>
         </section>
@@ -171,6 +171,19 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     pageContent.innerHTML = (renderers[currentPage] || renderHome)();
+
+    document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener('click', (event) => {
+            const targetId = link.getAttribute('href');
+            if (!targetId || targetId === '#') return;
+
+            const target = document.querySelector(targetId);
+            if (!target) return;
+
+            event.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
 
     if (currentPage === 'home') {
         let heroIndex = 0;
