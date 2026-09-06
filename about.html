@@ -4,59 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Ali Zaidi</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta name="description" content="About Ali Zaidi, a Human-Centered AI researcher and HCI scholar.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <h1 class="logo">Ali Zaidi</h1>
-            <ul class="nav-links">
-                <li><a href="about.html">About</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="teaching.html">Teaching</a></li>
-                <li><a href="awards.html">Awards and Honors</a></li>
-                <li><a href="roles.html">Leadership Roles</a></li>
-                <li><a href="Ali Zaidi - CV.pdf">Curriculum Vitae</a></li>
-            </ul>
-        </div>
-    </nav>
-    <main>
-        <section class="panel flex-panel">
-            <div class="section-header">About Me</div>
-            <div class="about-container">
-                <div class="profile-container">
-                    <img src="website_profile.jpeg" alt="Your Image" class="profile-image">
-                    <div class="contact-info">
-                        <h3>Contact Me</h3>
-                        <p>Email: aliz2 AT illinois DOT edu</p>
-                        <div class="footer-social-links">
-                            <a href="https://www.linkedin.com/in/ali-zaidi-940b49128/" class="fa fa-linkedin"></a>
-                            <a href="https://x.com/ali_h_zaidi" class="fa fa-twitter"></a>
-                            <a href="https://scholar.google.com/citations?user=GuuNgjgAAAAJ&hl=en&authuser=1" class="fa fa-graduation-cap"></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-text">
-                    <p>I am a final year Ph.D. candidate at the University of Illinois, Urbana-Champaign, advised by <a href="https://social.cs.uiuc.edu/#/./People">Professor Karrie Karahalios</a> and <a href="http://ranjithakumar.net/">Professor Ranjitha Kumar</a>. My research
-                        is in the field of <strong>Human-Centered AI Design</strong>. I investigate how we can design AI to address underlying systemic issues by working directly with stakeholders. My work 
-                        is interdisciplinary and spans the entire design process, from needfinding to building and evaluating solutions. I specialize in qualitative human-computer interaction (HCI)
-                        methods, such as interview, design probe, and participatory design approaches. 
-                    </p>
-                    <p>
-                        Currently, I am researching how to design AI technologies to assist parents of children with special needs to more effectively advocate for their children in
-                        schools. In the past, I have also worked with doctors to understand how to design AI for concussion evaluation, as well as with UX designers to build ML-based
-                        systems to assist in user experience research. I have also conducted user-centered evaluations of existing IoT/Smart Home infrastructures.
-                    </p>
-                    <p> <strong>I am on the job market! Looking for research, SWE, and MLE positions in industry.</strong></p>
-                </div>
-            </div>
-            </div>
-        </section>
+<body data-page="about">
+    <nav class="navbar" data-nav></nav>
+
+    <main class="page-main">
+        <div id="page-content"></div>
     </main>
-    <footer class="panel flex-panel">
-        <p>&copy; 2026 Ali Zaidi. All rights reserved.</p>
-    </footer>
+
+    <footer data-footer></footer>
+
+    <script src="site-data.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
